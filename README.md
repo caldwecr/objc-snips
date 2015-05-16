@@ -3,6 +3,7 @@ Useful snippets for obj-c organized in a README
 
 
 # Audio stuff
+http://kstenerud.github.io/ObjectAL-for-iPhone/documentation/index.html
 ```obj-c
 @implementation OALSimpleAudioSample
 - (id) init
