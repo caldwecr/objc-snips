@@ -40,6 +40,24 @@ _sinceTouch += delta;
     }
 ```
 
+# Cocos node stuff
+
+## Add nodes programmatically
+```obj-c
+- (void)spawnNewObstacle {
+    CCNode *previousObstacle = [_obstacles lastObject];
+    CGFloat previousObstacleXPosition = previousObstacle.position.x;
+    if (!previousObstacle) {
+        // this is the first obstacle
+        previousObstacleXPosition = firstObstaclePosition;
+    }
+    CCNode *obstacle = [CCBReader load:@"Obstacle"];
+    obstacle.position = ccp(previousObstacleXPosition + distanceBetweenObstacles, 0);
+    [_physicsNode addChild:obstacle];
+    [_obstacles addObject:obstacle];
+}
+```
+
 # Audio stuff
 http://kstenerud.github.io/ObjectAL-for-iPhone/documentation/index.html
 ```obj-c
