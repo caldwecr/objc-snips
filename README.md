@@ -59,6 +59,9 @@ _sinceTouch += delta;
 ```
 
 # Audio stuff
+
+_note:_ the audio files will appear in xcode under Resources/Published-iOS/ but when you need to specify the file name of the file you should describe the path to the file relative to Resources/Published-iOS. As an example if you had an audio file at Resources/Published-iOS/audio/song_1.m4a then you would provide @"audio/song_1.m4a" to playEffect.
+
 http://kstenerud.github.io/ObjectAL-for-iPhone/documentation/index.html
 ```obj-c
 @implementation OALSimpleAudioSample
