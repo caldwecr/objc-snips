@@ -3,6 +3,9 @@ Useful snippets for obj-c organized in a README
 
 # Physics
 https://www.makeschool.com/tutorials/learn-to-build-flappy-bird
+
+## Configuring the physics body
+
 ```obj-c
 - (void)didLoadFromCCB {
     _topPipe.physicsBody.collisionType = @"level";
@@ -10,6 +13,31 @@ https://www.makeschool.com/tutorials/learn-to-build-flappy-bird
     _bottomPipe.physicsBody.collisionType = @"level";
     _bottomPipe.physicsBody.sensor = TRUE;
 }
+```
+
+## Applying impulses
+```obj-c
+[_hero.physicsBody applyImpulse:ccp(0, 400.f)];
+[_hero.physicsBody applyAngularImpulse:10000.f];
+```
+
+## Limiting velocity
+```obj-c
+float yVelocity = clampf(_hero.physicsBody.velocity.y, -1 * MAXFLOAT, 200.f);
+_hero.physicsBody.velocity = ccp(0, yVelocity);
+```
+
+## Limiting angular velocity
+```obj-c
+_sinceTouch += delta;
+    _hero.rotation = clampf(_hero.rotation, -30.f, 90.f);
+    if (_hero.physicsBody.allowsRotation) {
+        float angularVelocity = clampf(_hero.physicsBody.angularVelocity, -2.f, 1.f);
+        _hero.physicsBody.angularVelocity = angularVelocity;
+    }
+    if ((_sinceTouch > 0.5f)) {
+        [_hero.physicsBody applyAngularImpulse:-40000.f*delta];
+    }
 ```
 
 # Audio stuff
