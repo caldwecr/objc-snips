@@ -123,3 +123,13 @@ http://kstenerud.github.io/ObjectAL-for-iPhone/documentation/index.html
 }
 @end
 ```
+
+# Generating random numbers
+
+## Integer
+```obj-c
+- (int)generateNumber:(int)max {
+    int r = arc4random_uniform(max);
+    return r;
+}
+```
