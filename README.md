@@ -1,6 +1,16 @@
 # objc-snips
 Useful snippets for obj-c organized in a README
 
+# Physics
+https://www.makeschool.com/tutorials/learn-to-build-flappy-bird
+```obj-c
+- (void)didLoadFromCCB {
+    _topPipe.physicsBody.collisionType = @"level";
+    _topPipe.physicsBody.sensor = TRUE;
+    _bottomPipe.physicsBody.collisionType = @"level";
+    _bottomPipe.physicsBody.sensor = TRUE;
+}
+```
 
 # Audio stuff
 http://kstenerud.github.io/ObjectAL-for-iPhone/documentation/index.html
