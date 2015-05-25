@@ -133,3 +133,7 @@ http://kstenerud.github.io/ObjectAL-for-iPhone/documentation/index.html
     return r;
 }
 ```
+
+# Meta-programming stuff
+
+[Dynamically calling methods](http://stackoverflow.com/questions/4446883/objective-c-calling-method-dynamically-with-a-string)
