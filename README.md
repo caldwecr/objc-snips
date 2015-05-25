@@ -137,3 +137,16 @@ http://kstenerud.github.io/ObjectAL-for-iPhone/documentation/index.html
 # Meta-programming stuff
 
 [Dynamically calling methods](http://stackoverflow.com/questions/4446883/objective-c-calling-method-dynamically-with-a-string)
+
+```obj-c
+SEL s = NSSelectorFromString(selectorName);
+[anObject performSelector:s];
+```
+
+```obj-c
+NSString *message = [self getSomeSelectorName];
+objc_msgSend(self, message);
+
+NSString *message = [self getSomeSelectorNameWithManyArguments];
+objc_msgSend(self, message, arg1, arg2, arg3, arg4);
+```
