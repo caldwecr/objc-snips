@@ -1,6 +1,12 @@
 # objc-snips
 Useful snippets for obj-c organized in a README
 
+# .h
+```obj-c
+@property (atomic, strong)NSString *roadName;
+@property (nonatomic, assign)BOOL paused;
+```
+
 # Physics
 https://www.makeschool.com/tutorials/learn-to-build-flappy-bird
 
